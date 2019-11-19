@@ -27,4 +27,4 @@ services:
       - env=remote
       - CUCUMBER_OPTIONS=classpath:Features
     volumes:
-     - ./target/test-output:/target/test-output
+     - ./target/test-output:/target/target/test-output
