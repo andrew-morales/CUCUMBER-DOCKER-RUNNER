@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage("Pull Latest asmorales/cucumber-docker Image"){
 			steps{
-				sh "docker pull asmorales/cucumber-docker"
+				sh "docker pull asmorales/cucumber-docker:latest"
 			}
 		}
 		stage("Start Grid"){
