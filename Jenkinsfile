@@ -19,7 +19,7 @@ pipeline{
 	}
 	post{
 		always{
-			publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'jenkins_home/workspace/CUCUMBER_DOCKER_RUNNER/target/test-output/sparkReport', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: 'Test Report'])
+			publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target/test-output/sparkReport', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: 'Test Report'])
 			archiveArtifacts artifacts: 'target/test-output/**'
 			sh "docker-compose down"
 		}
