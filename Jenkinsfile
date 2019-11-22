@@ -19,7 +19,7 @@ pipeline{
 	}
 	post{
 		always{
-			sh "cd /Users/andrewmorales/Documents/workspace_dockerT/jenkins_home/workspace/CUCUMBER_DOCKER_RUNNER/target/test-output/sparkReport"
+			sh "cd /Users/andrewmorales/Documents/workspace_dockerT/jenkins_home/workspace/CUCUMBER_DOCKER_RUNNER@tmp/target/test-output/sparkReport"
 			sh "sed -i 's//target/target/test-output/../g index.htm"
 			//sh "sed -i 's//target/target/test-output/../g' 'target/test-output/sparkReport/index.html'"
 			publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target/test-output/sparkReport', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: 'Test Report'])
