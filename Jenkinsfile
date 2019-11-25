@@ -19,7 +19,7 @@ pipeline{
 	}
 	post{
 		always{
-			sh "sed -i '' 's///target//target//test-output/../g' target//test-output/sparkReport/index.html"
+			sh "sed -i '' 's#/target/target/test-output#..#g' target/test-output/sparkReport/index.html"
 			//publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target/test-output/sparkReport', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: 'Test Report'])
 			archiveArtifacts artifacts: 'target/test-output/**'
 			sh "docker-compose down"
