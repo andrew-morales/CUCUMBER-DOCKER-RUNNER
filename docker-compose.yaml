@@ -23,7 +23,7 @@ services:
       - firefox
     environment:
       - HUB_HOST=hub
-      - browser=firefox
+      - browser=chrome
       - env=remote
       - CUCUMBER_OPTIONS=classpath:Features
     volumes:
